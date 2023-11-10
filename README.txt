@@ -1,1 +1,0 @@
-Projeto em conjunto com a turma de Mecatrônica
