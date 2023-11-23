@@ -1,11 +1,11 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
-from models.TemperatureModel import TemparatureEntity
-from serializer.TemperatureSerializer import TemperatureEntitySerializer
+from Fan.models.TemperatureModel import TemparatureEntity
+from Fan.serializer.TemperatureSerializer import TemperatureEntitySerializer
 
 
-class DetailFanEntityView(viewsets.ViewSet):
+class DetailTemperatureEntityView(viewsets.ViewSet):
 
     serializer_class = TemperatureEntitySerializer
 

@@ -15,8 +15,8 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from views.FanView import FanEntityView
-from views.DetailFanView import DetailFanEntityView
+from Fan.views.FanView import FanEntityView
+from Fan.views.DetailFanView import DetailFanEntityView
 
 urlpatterns = [
     path('', FanEntityView.as_view({
@@ -24,6 +24,6 @@ urlpatterns = [
         'post': 'create'
     })),
     path('<int:pk>/', DetailFanEntityView.as_view({
-        'get': 'retrieve',
+        'get': 'get_item',
     })),
 ]

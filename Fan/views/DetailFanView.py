@@ -2,8 +2,8 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework import status
-from models.FanModel import FanEntity
-from serializer.FanSerializer import FanEntitySerializer
+from Fan.models.FanModel import FanEntity
+from Fan.serializer.FanSerializer import FanEntitySerializer
 
 
 class DetailFanEntityView(viewsets.ViewSet):
