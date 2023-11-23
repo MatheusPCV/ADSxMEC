@@ -9,7 +9,7 @@ class DetailFanEntityView(viewsets.ViewSet):
 
     serializer_class = TemperatureEntitySerializer
 
-    def retrieve(self, request, pk=None):
+    def get_item(self, request, pk=None):
             try:
                 temperature_model = TemparatureEntity.objects.get(pk=pk)
                 serializer = self.serializer_class(temperature_model)

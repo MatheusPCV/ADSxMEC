@@ -9,7 +9,7 @@ from serializer.FanSerializer import FanEntitySerializer
 class DetailFanEntityView(viewsets.ViewSet):
 
     serializer_class = FanEntitySerializer
-    def retrieve(self, request, pk=None):
+    def get_item(self, request, pk=None):
             try:
                 fan_entity = FanEntity.objects.get(pk=pk)
                 serializer = self.serializer_class(fan_entity)
