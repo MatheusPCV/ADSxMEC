@@ -26,7 +26,7 @@ from Fan.urls import TemperatureUrl
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="API OCR",
+        title="API FAN",
         default_version='v0.1',
     ),
     public=True,
