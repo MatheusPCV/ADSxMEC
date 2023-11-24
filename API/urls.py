@@ -19,6 +19,6 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
-    path("esp-reset/", EspResetView.as_view(), name="esp_reset"),
-    path("esp-info/", EspInfoView.as_view(), name="esp_info"),
+    path("espreset/", include(EspResetView)),
+    path("espinfo/", include(EspInfoView)),
 ]
