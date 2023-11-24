@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'core',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -77,11 +78,14 @@ WSGI_APPLICATION = 'API.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'kxcmdawa',
+        'USER': 'kxcmdawa',
+        'PASSWORD': 'nh6Jgk3GhMr6Z6e9D_Zwr4XNg04T3reC',
+        'HOST': 'silly.db.elephantsql.com',
+        'PORT': '5432',  # Se a porta não foi especificada na URL, você pode usar a porta padrão do PostgreSQL (5432).
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

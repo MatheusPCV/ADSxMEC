@@ -1,22 +1,9 @@
-from .serializers import EspInfoSerializer
-from .serializers import EspResetSerializer
+from core.serializer.EspResetSerializer import EspResetSerializer
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import status
 import datetime
-
-from .models import EspInfo
-from .models import EspReset
-
-
-class EspInfoView(APIView):
-    def post(self, request, format=None):
-        serializer = EspInfoSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
+from core.models.EspResetEntity import EspReset
 
 class EspResetView(APIView):
     def post(self, request, *args, **kwargs):
