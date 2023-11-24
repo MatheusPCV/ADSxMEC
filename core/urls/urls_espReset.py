@@ -1,6 +1,6 @@
 from django.urls import path
-from core_app.views import EspInfoView
+from core.views.EspResetView import EspResetView
 
 urlpatterns = [
-    path('', EspInfoView.as_view({'post': 'create', 'get': 'list'}), name='espinfo-list'),
+    path('', EspResetView.as_view({'post': 'create', 'get': 'list'}), name='espinfo-list'),
 ]

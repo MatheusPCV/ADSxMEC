@@ -1,10 +1,10 @@
 
 from django.urls import path, include
-from app.views import EspResetView
+from core.views.EspInfoView import EspInfoView
 
 
 
 urlpatterns = [
-    path("", EspResetView.as_view({'post': 'create'}), name="esp_reset"),
+    path("", EspInfoView.as_view({'post': 'create'}), name="esp_reset"),
     
 ]

@@ -5,8 +5,8 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
 from django.conf import settings
-from app.views import EspInfoView, EspResetView
-
+from core.views.EspInfoView import EspInfoView
+from core.views.EspResetView import EspResetView
 
 
 schema_view = get_schema_view(
