@@ -5,6 +5,6 @@ from core.views.EspInfoView import EspInfoView
 
 
 urlpatterns = [
-    path("", EspInfoView.as_view({'post': 'create'}), name="esp_reset"),
+    path("", EspInfoView.as_view({'post': 'create','get':'list'}), name="esp_reset"),
     
 ]

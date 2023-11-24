@@ -8,7 +8,7 @@ from core.models.EspResetEntity import EspReset
 
 class EspResetView(ViewSet):
 
-    signal_status = True
+    signal_status = False
 
     def create(self, request, *args, **kwargs):
         global signal_status
