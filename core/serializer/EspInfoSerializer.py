@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from core.models.EspInfoEntity import EspInfo
+from core.models.EspInfoEntity import EspInfoEntity
 
 class EspInfoSerializer(serializers.ModelSerializer):
     class Meta:
-        model = EspInfo
+        model = EspInfoEntity
         fields = '__all__'

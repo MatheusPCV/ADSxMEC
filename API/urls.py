@@ -5,13 +5,12 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
 from django.conf import settings
-from core.urls import urls_espInfo,urls_espReset
+from core.urls import urls_espInfo
 
 
 
 
 
 urlpatterns = [
-    path("espreset/", include(urls_espReset)),
-    path("espinfo/", include(urls_espInfo)),
+    path("", include(urls_espInfo)),
 ]
